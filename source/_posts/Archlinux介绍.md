@@ -1,7 +1,7 @@
 ---
 title: Archlinux介绍
 date: 2023-04-14 11:34:06
-tags:
+tags: Linux，Arch
 ---
 # ArchLinux简介
 

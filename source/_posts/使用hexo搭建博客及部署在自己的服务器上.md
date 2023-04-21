@@ -75,25 +75,15 @@ tags: 教程
 ### 
 ## 服务器搭建
 
-# 新建博客
-* 在`/home`目录下建立一个空文件夹,就叫Blog吧。
-* 然后在终端输入`git init`
-* 生成并部署公钥
-    >本机命令，生成公钥：ssh-keygen -t rsa -C "*@*.com"  邮箱可以任意填写<br>
-    >本机命令，查看公钥：cat ~/.ssh/id_rsa.pub   查看之后然后copy
-    >github线上添加公钥：项目仓库 => settings => SSH and GPG keys => New SSH key <br>
-    把生成的公钥填入即可。
-* 本地仓库与远程仓库建立连接，添加远程源，这里我们采用ssh协议
-    >git remote add origin git@github.com:qza36/PocchiBlog.git      #origin是远程源的名字
-    <a href="https://imgloc.com/i/iEtB3w"><img src="https://i.328888.xyz/2023/04/16/iEtB3w.png" alt="iEtB3w.png" border="0" /></a>
-* 拉取远程仓库代码
-    >git pull origin master
-
+### 克隆远程仓库
+* 在`/home`目录下使用`git clone git@github.com:qza36/PocchiBlog.git`<br>
+    这样做会生成一个`PocchiBlog`文件夹，这样文件就传输到服务器上了。
+* 以后更新只需使用`git pull`就可以了
 
 # 代理服务器（Nginx）安装及配置
 1. 安装Nginx，`pacman -S Nginx`
 2. 修改配置文件，`vim /etc/nginx/nginx.conf` 找到以下内容，修改` root`后面的内容。<br>
-这个代码的意思是：Nginx会在` /home/blog/publc`里寻找`index.html index.html`<a href="https://imgloc.com/i/iEycJc"><img src="https://i.328888.xyz/2023/04/15/iEycJc.md.png" alt="iEycJc.png" border="0" /></a><br>
+这个代码的意思是：Nginx会在` /home/PocchiBlog/publc`里寻找`index.html index.html`<a href="https://imgloc.com/i/iEycJc"><img src="https://i.328888.xyz/2023/04/15/iEycJc.md.png" alt="iEycJc.png" border="0" /></a><br>
 <i>**注意** </i>: 不推荐将博客文件夹建立在<i>操作系统</i>root目录下，这样做可能会导致404错误。
 
 3. 修改后保存，然后在在终端输入`nginx -s reload` 
