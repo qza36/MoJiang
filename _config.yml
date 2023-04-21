@@ -3,13 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: 墨江風 
+subtitle: '辞暮尔尔，烟火年年'
 description: ''
 keywords:
-author: John Doe
-language: en
-timezone: ''
+author: 墨江
+language: zh-CN
+timezone: 'Asia/Shanghai'
+favicon: 'https://i.328888.xyz/2023/04/21/ihyOPN.md.png'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -97,8 +98,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
-
+theme: stellar 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
